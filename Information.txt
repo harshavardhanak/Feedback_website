@@ -1,0 +1,1 @@
+Virtualenv location: C:\Users\harsh\.virtualenvs\flaskFrameworkSmptProtocol-n0yddm37

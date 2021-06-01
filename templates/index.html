@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Feedback</title>
+</head>
+<body>
+    
+    <div class="container">
+        {% if message %}
+            <h4>{{message | safe }}</h4>
+        {% endif %}
+        <h3>Feedback!</h3>
+        <form action="submit" method="POST">
+            <div class="form-group">
+                <label for="username">Username : </label>
+                <input type="text" class="form-control" name='username' autocomplete="off" placeholder="Username??">
+            </div>
+            <div class="form-group">
+                <label for="email"> Email: </label>
+                <input type="email" class="form-control" name="email" autocomplete="off" placeholder="email??">
+            </div>
+            <div class="form-group">
+                <h4>Dealer</h4>
+                <select name="dealer">
+                    <option value="Harsha">Harsha</option>
+                    <option value="Akash">Akash</option>
+                    <option value="Keerthana">Keerthana</option>
+                    <option value="Krishna">Krishna</option>
+                    <option value="Lakshmi">Lakshmi</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <h4>Please rate our service!!</h4>
+                <input type="radio" name="rating" value="1"/>1
+                <input type="radio" name="rating" value="2" />2
+                <input type="radio" name="rating" value="3" />3
+                <input type="radio" name="rating" value="4" />4
+                <input type="radio" name="rating" value="5" />5
+            </div>
+            <div class="form-group">
+                <h4>Comments :</h4>
+                <textarea name="comment"  cols="30" rows="10" placeholder="wht you like/ did not like">
+                </textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</body>
+</html>
